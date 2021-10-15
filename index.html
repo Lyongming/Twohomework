@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			table {
+				border-collapse: collapse;
+			}
+			td {
+				padding: 20px;
+				border: 1px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<script>
+			//第一个作业
+			document.write('<h1>第一个作业</h1>');
+			const one = document.querySelector('.one');
+			document.write('<table>');
+			for(let i=1;i<=9;i++){
+				document.write('<tr>');
+				for(let j=1;j<=i;j++){
+					document.write('<td>');
+					document.write(`${j} * ${i} = ${i*j}`);
+					document.write('</td>');
+					// if(j<9){
+					// 	document.write('<td></td>');
+					// }
+				}
+				for(let d=i+1;d<=9;d++){
+					document.write('<td></td>');
+				}
+				document.write('</tr>');
+			}
+			document.write('</table>');
+			document.write('<hr>');
+			//第二个作业
+			document.write('<h1>第二个作业</h1>');
+			document.write('<table>')
+			for(let i=0;i<14;i++){
+				document.write('<tr>')
+				for(let j=0;j<14;j++){
+					document.write('<td>');
+					if(i===0 && j===0) {
+						document.write('X');
+					}else if(i===0){
+						document.write(`${j-1} `);
+					}else if(j===0){
+						document.write(`${i-1} `);
+					} else {
+					 	document.write(`${(i-1)*(j-1)} `);
+					}
+					document.write('</td>');
+				}
+				
+				document.write('</tr>')
+			}
+			document.write('</table>')
+			//第三个作业
+			document.write('<h1>第三个作业</h1>');
+			const three = document.querySelector('.three');
+			let threenum;
+			let rowChange='';
+			let count=0;
+			for(let i=0;i<=0;i++){
+				for(let j=0;j<=99;j++){
+					count++;
+					if(j<10){
+					document.write(`0${j} `);
+					}else{
+						document.write(`${j}  `)
+					}
+					if(count%10===0){
+						document.write('</br>');
+					}
+					
+				}
+				
+			}
+			document.write('<hr>')
+			//第四个作业
+			document.write('<h1>第四个作业</h1>');
+			const four = document.querySelector('.four');
+			let num = '';
+			let Anum = 0,
+				Bnum = 0,
+				Cnum = 0;
+			let total;
+			for (let i = 1; i <= 100; i++) {
+				num = num + i + ' ';
+				if (i % 3 === 0 && i % 5 === 0) {
+					Cnum++;
+					num += 'C ';
+				} else if (i % 5 === 0) {
+					Bnum++;
+					num += 'B ';
+				} else if (i % 3 === 0) {
+					Anum++;
+					num += 'A ';
+				}
+			}
+			let aaa = `A的数量为${Anum}个,B的数量为${Bnum}个,C的数量为${Cnum}个。`;
+			document.write(num+aaa)  ;
+			document.write('<hr>');
+			//第五个作业
+			document.write('<h1>第五个作业one</h1>');
+			document.write('<p>');
+			let aNum=prompt('请输入a的值');
+			let bNum=prompt('请输入b值');
+			 a=Number(aNum);
+			 b=Number(bNum);
+			document.write(a>b?'a大于b':(a<b?'a小于b':'a等于b')) ;
+			 document.write('</p>');
+			document.write('<hr>')
+			document.write('<h1>第五个作业two</h1>');
+			let aTwo=1;
+			let bTwo=2;
+			let cTwo=(aTwo*4)+Math.pow(bTwo,3);
+			document.write(`c的值为${cTwo}`);
+		</script>
+	</body>
+</html>
